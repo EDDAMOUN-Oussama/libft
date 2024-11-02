@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:36:38 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/29 19:26:51 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 20:52:57 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char	*p;
+	char	*p;
 
-	p = (unsigned char *)s;
+	p = (char *)s;
 	while (*p)
 	{
-		if (*p == (unsigned char) c)
-			return ((char *) p);
+		if (*p == (char) c)
+			return (p);
 		p++;
 	}
-	if (*p == (unsigned char) c)
-		return ((char *) p);
+	if (*p == (char) c)
+		return (p);
 	return (NULL);
 }

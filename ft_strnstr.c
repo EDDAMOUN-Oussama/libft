@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 19:19:45 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/27 12:17:41 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:06:00 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strnstr(const char *str, const char *fd, size_t len)
 	size_t	j;
 
 	i = 0;
+	if (str == NULL && len == 0)
+		return (NULL);
 	if (fd[i] == '\0')
 		return ((char *) str);
 	while (str[i] && i < len)

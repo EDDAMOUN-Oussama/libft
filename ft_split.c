@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 08:20:19 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/29 14:45:17 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 19:14:25 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		j;
 
+	if (s == NULL)
+		return (NULL);
 	p = malloc (sizeof (char *) * ft_c_mot(s, c));
 	if (!p)
 		return (NULL);

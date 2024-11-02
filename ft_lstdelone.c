@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 21:07:14 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/31 16:02:47 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 19:55:33 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	if (lst)
+	if (lst && del)
 	{
 		del(lst->content);
 		free(lst);

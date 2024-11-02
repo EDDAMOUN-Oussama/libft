@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 08:15:32 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/30 15:01:24 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 16:45:45 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,18 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	p = malloc(size * count);
-	if (p == NULL)
-		return (NULL);
-	while (i < count * size)
+	if (size * count == 0)
+		return (malloc (0));
+	else
 	{
-		p[i] = '\0';
-		i++;
+		p = malloc(size * count);
+		if (p == NULL)
+			return (NULL);
+		while (i < count * size)
+		{
+			p[i] = '\0';
+			i++;
+		}
 	}
 	return ((void *)p);
 }

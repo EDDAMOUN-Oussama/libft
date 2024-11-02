@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 09:06:40 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/27 12:15:43 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/01 17:12:36 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	len_s = 0;
 	while (src[len_s])
 		len_s++;
+	if (!dstsize)
+		return (len_s);
 	while (dst[len_d])
 		len_d++;
 	if (len_d >= dstsize)

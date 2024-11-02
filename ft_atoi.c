@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:06:45 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/27 11:02:50 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/02 09:26:57 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	s;
-	int	r;
+	int					i;
+	int					s;
+	unsigned long long	r;
 
 	i = 0;
 	s = 1;
@@ -31,8 +31,12 @@ int	ft_atoi(const char *str)
 	r = 0;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		r = r * 10 + s * (str[i] - '0');
+		r = r * 10 + (str[i] - '0');
 		i++;
+		if (r > LLONG_MAX && s > 0)
+			return (-1);
+		if (r > LLONG_MAX && s < 0)
+			return (0);
 	}
-	return (r);
+	return ((int)(r * s));
 }
