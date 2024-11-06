@@ -6,19 +6,15 @@
 /*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 09:57:48 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/11/02 15:08:30 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/06 10:28:27 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stdio.h>
 # include <stdlib.h>
-# include <string.h>
-# include <stddef.h>
 # include <unistd.h>
-# include <limits.h>
 
 typedef struct s_list
 {

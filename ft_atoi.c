@@ -6,7 +6,7 @@
 /*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 21:06:45 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/11/02 09:26:57 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/06 10:11:46 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,9 +33,9 @@ int	ft_atoi(const char *str)
 	{
 		r = r * 10 + (str[i] - '0');
 		i++;
-		if (r > LLONG_MAX && s > 0)
+		if (r > 9223372036854775807 && s > 0)
 			return (-1);
-		if (r > LLONG_MAX && s < 0)
+		if (r > 9223372036854775807 && s < 0)
 			return (0);
 	}
 	return ((int)(r * s));

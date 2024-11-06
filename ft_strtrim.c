@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 15:12:58 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/11/01 19:06:35 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:46:03 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	i;
 	size_t	j;
 
-	if (s1 == NULL)
+	if (!set || s1 == NULL)
 		return (NULL);
 	i = 0;
 	while (s1[i] && is_here(set, s1[i]))

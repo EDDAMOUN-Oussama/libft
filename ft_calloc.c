@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 08:15:32 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/11/01 16:45:45 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/06 10:23:06 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,18 +18,15 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	i;
 
 	i = 0;
-	if (size * count == 0)
-		return (malloc (0));
-	else
+	if (size != 0 && count > 18446744073709551615UL / size)
+		return (NULL);
+	p = malloc(size * count);
+	if (p == NULL)
+		return (NULL);
+	while (i < count * size)
 	{
-		p = malloc(size * count);
-		if (p == NULL)
-			return (NULL);
-		while (i < count * size)
-		{
-			p[i] = '\0';
-			i++;
-		}
+		p[i] = '\0';
+		i++;
 	}
 	return ((void *)p);
 }

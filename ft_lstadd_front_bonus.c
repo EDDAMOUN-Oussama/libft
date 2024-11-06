@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_lstadd_front_bonus.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 18:15:02 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/30 20:20:46 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/03 13:49:00 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,14 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	if (new)
+	if (lst && new)
 	{
-		new->next = *lst;
-		*lst = new;
+		if (!*lst)
+			*lst = new;
+		else
+		{
+			new->next = *lst;
+			*lst = new;
+		}
 	}
 }

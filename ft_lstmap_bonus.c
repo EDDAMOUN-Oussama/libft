@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oeddamou <oeddamou@student.1337.ma>        +#+  +:+       +#+        */
+/*   By: oeddamou <oeddamou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:03:57 by oeddamou          #+#    #+#             */
-/*   Updated: 2024/10/31 21:04:47 by oeddamou         ###   ########.fr       */
+/*   Updated: 2024/11/03 14:25:38 by oeddamou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*l;
 	void	*c;
 
-	if (lst == NULL)
+	if (!del || !*f || lst == NULL)
 		return (NULL);
 	l = NULL;
 	while (lst)
